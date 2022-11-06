@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		<script type="importmap">
+		{
+			"imports": {
+				"three": "./three.module.js"
+			}
+		}
+		</script>
+
+		<script src="https://cdn.jsdelivr.net/npm/mind-ar/dist/mindar-image-three.prod.js"></script>
+		<script src="https://player.vimeo.com/api/player.js"></script>
+		<script src="./test_vimeo.js" type="module"></script>
+		<style>
+			html, body {
+				position: relative;
+				margin: 0;
+				overflow: hidden;
+				width: 100%;
+				height: 100%
+			}
+
+			#ar-div {
+				visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ar-div">
+			<iframe src="https://player.vimeo.com/video/275252829" width="1000" height="1000"></iframe>
+		</div>
+	</body>
+</html>
