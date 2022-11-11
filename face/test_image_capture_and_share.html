@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+src="https://cdn.jsdelivr.net/npm/mind-ar/dist/mindar-face-three.prod.js">
+    </script>
+		<script type="importmap">
+		{
+			"imports": {
+				"three": "./three.module.js"
+			}
+		}
+		</script>
+
+		<script src="./test_image_capture_and_share.js" type="module"></script>
+		<style>
+			html, body {position: relative; margin: 0; width: 100%; height: 100%; overflow: hidden}
+			#capture {
+				position: fixed;
+				bottom: 2vh;
+				left: 50%;
+				height: 12vw;
+				transform: translateX(-50%);
+				width: 12vw;
+				z-index: 10;
+				border: solid 2px;
+				border-radius: 50%;
+			}
+
+			#preview {
+				width: 80%;
+				height: 80%;
+				position: fixed;
+				z-index: 10;
+				left: 10%;
+				top: 10%;
+				border: solid 8px red;
+				visibility: hidden;
+			}
+
+				#preview-image {
+					width: 100%;
+					height: 100%;
+				}
+
+				#preview-close {
+					position: absolute;
+					right: 0;
+					top: 0;
+					font-size: 20px;
+					padding: 5px;
+					border: solid 5px blue;
+					color: white;
+				}
+
+				#preview-share {
+					position: absolute;
+					font-size: 20px;
+					padding: 10px 30px;
+					border: solid 1px;
+					text-align: center;
+					background: white;
+					bottom: 10px;
+					left: 50%;
+					transform: translateX(-50%);
+					z-index: 10;
+					border: none;
+					border-radius: 10px;
+
+				}
+
+
+		</style>
+	</head>
+	<body>
+		<button id="capture"></button>
+		<div id="preview">
+			<div id="preview-close">X</div>
+			<img id="preview-image"/>
+			<div id="preview-share">Поділитися</div>
+		</div>
+	</body>
+</html>
+
